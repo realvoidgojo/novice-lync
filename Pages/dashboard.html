@@ -33,16 +33,16 @@
 </head>
 
 <body>
-  <div class="flex min-h-screen bg-[var(--background)]">
-    <div class="sidebar flex flex-col items-center justify-between bg-[#fefaff] p-4 h-screen w-64">
+  <div class="flex min-h-screen">
+    <div class="sidebar flex flex-col items-center justify-between bg-primary-light p-4 h-screen w-64">
       <div class="text-center mb-4">
         <a href="../index.html"><span class="text-xl font-bold text-black">Novice Lync</span></a>
       </div>
       <img src="../Assets/img/logo/logo.png" alt="NOVICE LYNC logo" class="mb-4" />
       <ul class="space-y-6 w-full">
-        <li id="dashboard" class="flex items-center space-x-2">
+        <li id="dashboard" class="flex items-center space-x-2 bg-primary rounded p-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=🗂" alt="Dashboard icon" aria-hidden="true" />
-          <a href="./dashboard.html"><span>Dashboard</span></a>
+          <a href="./dashboard.html"><span class="font-bold">Dashboard</span></a>
         </li>
         <li id="userProfile" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=👤" alt="User Profile icon" aria-hidden="true" />
@@ -50,11 +50,11 @@
         </li>
         <li id="connect" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=🔗" alt="Connect icon" aria-hidden="true" />
-          <span>Connect</span>
+          <a href="./connect.html"><span>Connect</span></a>
         </li>
         <li id="teams" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=👥" alt="Teams icon" aria-hidden="true" />
-          <span>Teams</span>
+          <a href="./teams.html"><span>Teams</span></a>
         </li>
         <li id="progress" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=📈" alt="Progress icon" aria-hidden="true" />
@@ -62,17 +62,13 @@
         </li>
         <li id="support" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=🎧" alt="Support icon" aria-hidden="true" />
-          <span>Support</span>
+          <a href="./support.html"><span>Support</span></a>
         </li>
       </ul>
-      <a href="#"
-        class="mt-auto text-center w-28 inline-block px-6 py-2 text-white bg-red-600 border border-red-700 rounded-md hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-400 transition-colors text-sm">
-        Log out
-      </a>
+      <a href="#" class="btn btn-primary w-full text-center mt-auto">Log Out</a>
     </div>
 
-    <div class="divider"></div>
-    <div class="main-content flex-1 p-4">
+    <div class="main-content p-8 w-3/4 bg-primary-light overflow-y-auto">
       <h1 class="text-3xl font-bold">Hello User,</h1>
       <h2 class="text-2xl font-semibold text-primary">
         Manage Your Projects <span class="text-purple-800">Faster</span>

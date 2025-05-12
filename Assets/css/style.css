@@ -1,204 +1,255 @@
 :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
-    --radius: 0.5rem;
+  /* Color Palette */
+  --primary: #8052a3;
+  --primary-foreground: #ffffff;
+  --primary-light: #a67fc0;
+  --primary-lighter: #fbf2ff;
+  --primary-lightest: #fefaff;
+
+  /* Background Colors */
+  --background: #ffffff;
+  --secondary: #f3f4f6;
+
+  /* Text Colors */
+  --text: #111827;
+  --text-medium: #4b5563;
+  --text-light: #6B7280;
+  --text-dark: #111827;
+
+  /* Status Colors */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+  --info: #1e3a8a;
+
+  /* UI Elements */
+  --card: #ffffff;
+  --card-foreground: var(--text);
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: var(--primary-light);
+
+  /* Spacing System - Keep your existing spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
 }
 
-.dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
-}
-
+/* Global Styles */
 body {
-    background-color: #c7a4df;
-    font-family: "Inter", sans-serif;
+  font-family: var(--font-family);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  text-align: center;
 }
 
 .btn-primary {
-    background-color: hsl(var(--primary));
-    color: hsl(var(--primary-foreground));
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius);
-    transition: background-color 0.3s;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border: 1px solid var(--primary);
 }
 
 .btn-primary:hover {
-    background-color: hsl(var(--primary-foreground));
-    color: hsl(var(--primary));
+  background-color: var(--primary-light);
 }
 
+.btn-secondary {
+  background-color: var(--background);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-lighter);
+}
+
+/* Cards */
 .card {
-    background-color: hsl(var(--card));
-    color: hsl(var(--card-foreground));
-    border-radius: var(--radius);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+  background-color: var(--card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+  color: var(--card-foreground);
 }
 
+.card-highlight {
+  background-color: var(--primary-lightest);
+}
+
+/* Form Elements */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background-color: var(--background);
+  color: var(--text);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary-lighter);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Sidebar */
 .sidebar {
-    width: 20%;
-    background-color: #fbf2ff;
-    color: hsl(var(--secondary-foreground));
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  background-color: var(--primary-lightest);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-.main-content {
-    width: 80%;
-    background-color: #c7a4df;
-    color: hsl(var(--accent-foreground));
-    padding: 2rem;
-}
-
-.notification-body {
-    background-color: #fff;
-    border: 1px solid #e5e7eb;
-    border-radius: var(--radius);
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 1rem;
-}
-
-.divider {
-    border-left: 2px solid white;
-    height: 100%;
-}
-
-.chart-container {
-    position: relative;
-    width: 300px;
-    height: 300px;
-}
-
+/* Progress Bars */
 .progress-bar {
-    height: 20px;
-    border-radius: 0.5rem;
-    background-color: #e5e7eb;
-    position: relative;
+  width: 100%;
+  background-color: var(--secondary);
+  border-radius: 9999px;
+  height: 0.625rem;
+  overflow: hidden;
 }
 
-.progress-bar .progress-fill {
-    height: 100%;
-    border-radius: inherit;
-    transition: width 0.3s ease-in-out;
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 9999px;
 }
 
-.progress-bar .progress-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-weight: bold;
+.progress-bar-fill.success {
+  background-color: var(--success);
 }
 
-.todo-list {
-    list-style-type: none;
+.progress-bar-fill.warning {
+  background-color: var(--warning);
 }
 
-.todo-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
+.progress-bar-fill.info {
+  background-color: var(--info);
 }
 
-.todo-item input[type="checkbox"] {
-    margin-right: 8px;
+/* Status Badges */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 
-.input-container {
-    flex: 1;
-    min-width: 0;
+.badge-success {
+  background-color: var(--success);
+  color: var(--primary-foreground);
 }
 
-.input-field {
-    width: 100%;
-    max-width: 300px;
+.badge-warning {
+  background-color: var(--warning);
+  color: var(--primary-foreground);
 }
 
-.edit-icon:hover img {
-    cursor: pointer;
+.badge-info {
+  background-color: var(--info);
+  color: var(--primary-foreground);
 }
 
-.calendar-container {
-    max-width: 250px;
-    /* Adjust this value as needed */
-    margin: auto;
-    /* Center the calendar */
+.badge-danger {
+  background-color: var(--danger);
+  color: var(--primary-foreground);
 }
 
-.calendar-cell {
-    padding: 0.5rem;
-    /* Reduce padding */
-    font-size: 0.75rem;
-    /* Reduce font size */
+/* Navbar */
+.navbar {
+  background-color: var(--primary-lighter);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-md) 0;
 }
 
-.icon-black {
-    fill: black;
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
 }
 
-.sidebar {
-    position: -webkit-sticky;
-    /* For Safari */
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    /* Full viewport height */
-    overflow-y: auto;
-    /* Scrollable sidebar if needed */
+/* Section Styles */
+.section {
+  padding: var(--space-2xl) 0;
 }
 
-.content {
-    flex: 1;
-    /* Takes up the remaining space */
-    overflow-y: auto;
-    /* Scrollable content area */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-xl);
+  text-align: center;
 }
 
-
-.input-field {
-    flex: 1;
+/* Footer */
+.footer {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: var(--space-lg) 0;
 }
 
-.password-box button {
-    position: absolute;
-    right: 0.6rem;
-    top: 2.4rem;
+.footer-link {
+  color: var(--primary-foreground);
+  font-weight: 600;
+}
+
+/* Social Media Icons */
+.social-icon {
+  display: flex;
+  align-items: center;
+  color: var(--primary-foreground);
+  text-decoration: none;
+}
+
+.social-icon svg {
+  margin-right: var(--space-sm);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-xl) 0;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
 }

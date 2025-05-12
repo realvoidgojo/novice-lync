@@ -7,9 +7,9 @@
   </head>
 
   <body>
-    <div class="flex min-h-screen bg-[var(--background)]">
+    <div class="flex min-h-screen">
       <div
-        class="sidebar flex flex-col items-center justify-between bg-[#fefaff] p-4 h-screen w-64"
+        class="sidebar flex flex-col items-center justify-between bg-primary-light p-4 h-screen w-64"
       >
         <div class="text-center mb-4">
           <a href="../index.html"
@@ -30,13 +30,13 @@
             />
             <a href="./dashboard.html"><span>Dashboard</span></a>
           </li>
-          <li id="userProfile" class="flex items-center space-x-2">
+          <li id="userProfile" class="flex items-center space-x-2 bg-primary rounded p-2">
             <img
               src="https://openui.fly.dev/openui/24x24.svg?text=👤"
               alt="User Profile icon"
               aria-hidden="true"
             />
-            <a href="./userProfile.html"><span>User Profile</span></a>
+            <a href="./userProfile.html"><span class="font-bold">User Profile</span></a>
           </li>
           <li id="connect" class="flex items-center space-x-2">
             <img
@@ -44,7 +44,7 @@
               alt="Connect icon"
               aria-hidden="true"
             />
-            <span>Connect</span>
+            <a href="./connect.html"><span>Connect</span></a>
           </li>
           <li id="teams" class="flex items-center space-x-2">
             <img
@@ -52,7 +52,7 @@
               alt="Teams icon"
               aria-hidden="true"
             />
-            <span>Teams</span>
+            <a href="./teams.html"><span>Teams</span></a>
           </li>
           <li id="progress" class="flex items-center space-x-2">
             <img
@@ -68,18 +68,13 @@
               alt="Support icon"
               aria-hidden="true"
             />
-            <span>Support</span>
+            <a href="./support.html"><span>Support</span></a>
           </li>
         </ul>
-        <a
-          href="#"
-          class="mt-auto text-center w-28 inline-block px-6 py-2 text-white bg-red-600 border border-red-700 rounded-md hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-400 transition-colors text-sm"
-        >
-          Log out
-        </a>
+        <a href="#" class="btn btn-primary w-full text-center mt-auto">Log Out</a>
       </div>
 
-      <div class="w-3/4 bg-[var(--secondary)] p-8 p-8 mx-auto">
+      <div class="main-content p-8 w-3/4 bg-primary-light">
         <div class="flex flex-col items-center mb-8">
           <div
             class="w-32 h-32 rounded-full border-4 border-white flex items-center justify-center mb-4 overflow-hidden"

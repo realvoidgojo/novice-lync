@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <title>Connect - Novice Lync</title>
+  </head>
+
+  <body>
+    <div class="flex min-h-screen">
+      <!-- Sidebar -->
+      <div class="w-64 bg-primary-lightest p-4 flex flex-col h-screen">
+        <div class="text-center mb-4">
+          <a href="../index.html"
+            ><span class="navbar-brand">Novice Lync</span></a
+          >
+        </div>
+        <img
+          src="../Assets/img/logo/logo.png"
+          alt="NOVICE LYNC logo"
+          class="mx-auto mb-4"
+        />
+        <ul class="space-y-4 w-full">
+          <li class="p-2 hover:bg-primary-lighter rounded-md">
+            <a href="./dashboard.html" class="flex items-center space-x-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                />
+              </svg>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <!-- ...other menu items... -->
+        </ul>
+        <a
+          href="#"
+          class="mt-auto mx-auto px-6 py-2 text-white bg-red-600 hover:bg-red-500 rounded-md text-sm"
+        >
+          Log out
+        </a>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-content p-8 w-3/4 bg-primary-light">
+        <h1 class="text-3xl font-bold mb-6 text-text-dark">
+          Connect with Others
+        </h1>
+
+        <!-- Search Section -->
+        <div class="card mb-6">
+          <h2 class="text-xl font-semibold mb-4 text-text-dark">
+            Find Connections
+          </h2>
+          <div class="flex flex-wrap gap-4 mb-4">
+            <div class="flex-1">
+              <input
+                type="text"
+                placeholder="Search by name or skills"
+                class="w-full"
+              />
+            </div>
+            <button class="btn btn-primary">Search</button>
+          </div>
+
+          <!-- Filters -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div>
+              <label for="degree">Degree</label>
+              <select id="degree" class="w-full">
+                <option value="">All Degrees</option>
+                <option value="bachelor">Bachelor's</option>
+                <option value="master">Master's</option>
+                <option value="phd">PhD</option>
+              </select>
+            </div>
+            <div>
+              <label for="interest">Interest Area</label>
+              <select id="interest" class="w-full">
+                <option value="">All Interests</option>
+                <option value="programming">Programming</option>
+                <option value="design">Design</option>
+                <option value="research">Research</option>
+                <option value="business">Business</option>
+              </select>
+            </div>
+            <div>
+              <label for="availability">Availability</label>
+              <select id="availability" class="w-full">
+                <option value="">Any Availability</option>
+                <option value="full-time">Full-time</option>
+                <option value="part-time">Part-time</option>
+                <option value="weekends">Weekends Only</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- User Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- User Card 1 -->
+          <div class="card hover:shadow-lg transition-shadow">
+            <div class="flex items-start">
+              <img
+                src="https://openui.fly.dev/openui/64x64.svg?text=👩‍🎓"
+                alt="User Avatar"
+                class="rounded-full mr-4"
+              />
+              <div>
+                <h3 class="font-bold text-lg">Sarah Johnson</h3>
+                <p class="text-text-medium">Master's in Computer Science</p>
+                <div class="mt-2">
+                  <span
+                    class="inline-block bg-primary-light text-text-dark rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                    >Python</span
+                  >
+                  <span
+                    class="inline-block bg-primary-light text-text-dark rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                    >Machine Learning</span
+                  >
+                  <span
+                    class="inline-block bg-primary-light text-text-dark rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                    >Data Science</span
+                  >
+                </div>
+              </div>
+            </div>
+            <p class="mt-4 text-text-medium">
+              Looking to collaborate on machine learning projects with practical
+              applications in healthcare.
+            </p>
+            <div class="mt-4 flex justify-end">
+              <button class="btn btn-secondary mr-2">Message</button>
+              <button class="btn btn-primary">Connect</button>
+            </div>
+          </div>
+
+          <!-- User Card 2 -->
+          <div class="card hover:shadow-lg transition-shadow">
+            <div class="flex items-start">
+              <img
+                src="https://openui.fly.dev/openui/64x64.svg?text=👨‍🎓"
+                alt="User Avatar"
+                class="rounded-full mr-4"
+              />
+              <div>
+                <h3 class="font-bold text-lg">Michael Chen</h3>
+                <p class="text-text-medium">Bachelor's in Graphic Design</p>
+                <div class="mt-2">
+                  <span
+                    class="inline-block bg-primary-light text-text-dark rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                    >UI/UX</span
+                  >
+                  <span
+                    class="inline-block bg-primary-light text-text-dark rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                    >Figma</span
+                  >
+                  <span
+                    class="inline-block bg-primary-light text-text-dark rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                    >Web Design</span
+                  >
+                </div>
+              </div>
+            </div>
+            <p class="mt-4 text-text-medium">
+              Passionate about creating intuitive user interfaces. Looking for
+              frontend development opportunities.
+            </p>
+            <div class="mt-4 flex justify-end">
+              <button class="btn btn-secondary mr-2">Message</button>
+              <button class="btn btn-primary">Connect</button>
+            </div>
+          </div>
+
+          <!-- User Card 3 -->
+          <div class="card hover:shadow-lg transition-shadow">
+            <div class="flex items-start">
+              <img
+                src="https://openui.fly.dev/openui/64x64.svg?text=👩‍🔬"
+                alt="User Avatar"
+                class="rounded-full mr-4"
+              />
+              <div>
+                <h3 class="font-bold text-lg">Emily Rodriguez</h3>
+                <p class="text-text-medium">PhD in Biotechnology</p>
+                <div class="mt-2">
+                  <span
+                    class="inline-block bg-primary-light text-text-dark rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                    >Research</span
+                  >
+                  <span
+                    class="inline-block bg-primary-light text-text-dark rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                    >Data Analysis</span
+                  >
+                  <span
+                    class="inline-block bg-primary-light text-text-dark rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                    >R Programming</span
+                  >
+                </div>
+              </div>
+            </div>
+            <p class="mt-4 text-text-medium">
+              Conducting research on sustainable biotechnology solutions.
+              Seeking collaborators with programming skills.
+            </p>
+            <div class="mt-4 flex justify-end">
+              <button class="btn btn-secondary mr-2">Message</button>
+              <button class="btn btn-primary">Connect</button>
+            </div>
+          </div>
+
+          <!-- User Card 4 -->
+          <div class="card hover:shadow-lg transition-shadow">
+            <div class="flex items-start">
+              <img
+                src="https://openui.fly.dev/openui/64x64.svg?text=👨‍💻"
+                alt="User Avatar"
+                class="rounded-full mr-4"
+              />
+              <div>
+                <h3 class="font-bold text-lg">David Wilson</h3>
+                <p class="text-text-medium">
+                  Bachelor's in Computer Engineering
+                </p>
+                <div class="mt-2">
+                  <span
+                    class="inline-block bg-primary-light text-text-dark rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                    >JavaScript</span
+                  >
+                  <span
+                    class="inline-block bg-primary-light text-text-dark rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                    >React</span
+                  >
+                  <span
+                    class="inline-block bg-primary-light text-text-dark rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                    >Node.js</span
+                  >
+                </div>
+              </div>
+            </div>
+            <p class="mt-4 text-text-medium">
+              Full-stack developer with a passion for building web applications.
+              Looking for team projects.
+            </p>
+            <div class="mt-4 flex justify-end">
+              <button class="btn btn-secondary mr-2">Message</button>
+              <button class="btn btn-primary">Connect</button>
+            </div>
+          </div>
+
+          <!-- User Card 5 -->
+          <div class="card hover:shadow-lg transition-shadow">
+            <div class="flex items-start">
+              <img
+                src="https://openui.fly.dev/openui/64x64.svg?text=👩‍💼"
+                alt="User Avatar"
+                class="rounded-full mr-4"
+              />
+              <div>
+                <h3 class="font-bold text-lg">Olivia Martinez</h3>
+                <p class="text-text-medium">
+                  Master's in Business Administration
+                </p>
+                <div class="mt-2">
+                  <span
+                    class="inline-block bg-primary-light text-text-dark rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                    >Project Management</span
+                  >
+                  <span
+                    class="inline-block bg-primary-light text-text-dark rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                    >Marketing</span
+                  >
+                  <span
+                    class="inline-block bg-primary-light text-text-dark rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                    >Entrepreneurship</span
+                  >
+                </div>
+              </div>
+            </div>
+            <p class="mt-4 text-text-medium">
+              Experienced in business strategy and marketing. Interested in
+              startup collaborations and innovative projects.
+            </p>
+            <div class="mt-4 flex justify-end">
+              <button class="btn btn-secondary mr-2">Message</button>
+              <button class="btn btn-primary">Connect</button>
+            </div>
+          </div>
+
+          <!-- User Card 6 -->
+          <div class="card hover:shadow-lg transition-shadow">
+            <div class="flex items-start">
+              <img
+                src="https://openui.fly.dev/openui/64x64.svg?text=👨‍🔬"
+                alt="User Avatar"
+                class="rounded-full mr-4"
+              />
+              <div>
+                <h3 class="font-bold text-lg">James Taylor</h3>
+                <p class="text-text-medium">PhD in Physics</p>
+                <div class="mt-2">
+                  <span
+                    class="inline-block bg-primary-light text-text-dark rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                    >Quantum Computing</span
+                  >
+                  <span
+                    class="inline-block bg-primary-light text-text-dark rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                    >Mathematics</span
+                  >
+                  <span
+                    class="inline-block bg-primary-light text-text-dark rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                    >Simulation</span
+                  >
+                </div>
+              </div>
+            </div>
+            <p class="mt-4 text-text-medium">
+              Researching quantum computing applications. Looking for
+              collaborators with strong mathematical backgrounds.
+            </p>
+            <div class="mt-4 flex justify-end">
+              <button class="btn btn-secondary mr-2">Message</button>
+              <button class="btn btn-primary">Connect</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-center mt-8">
+          <nav class="inline-flex rounded-md shadow-sm">
+            <a
+              href="#"
+              class="px-3 py-2 bg-white border border-gray-300 rounded-l-md hover:bg-gray-100"
+              >Previous</a
+            >
+            <a
+              href="#"
+              class="px-3 py-2 bg-accent text-white border border-accent"
+              >1</a
+            >
+            <a
+              href="#"
+              class="px-3 py-2 bg-white border border-gray-300 hover:bg-gray-100"
+              >2</a
+            >
+            <a
+              href="#"
+              class="px-3 py-2 bg-white border border-gray-300 hover:bg-gray-100"
+              >3</a
+            >
+            <a
+              href="#"
+              class="px-3 py-2 bg-white border border-gray-300 rounded-r-md hover:bg-gray-100"
+              >Next</a
+            >
+          </nav>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

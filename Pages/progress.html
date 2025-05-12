@@ -36,8 +36,8 @@
 </head>
 
 <body>
-  <div class="flex min-h-screen bg-[var(--background)]">
-    <div class="sidebar flex flex-col items-center justify-between bg-[#fefaff] p-4 h-screen w-64">
+  <div class="flex min-h-screen">
+    <div class="sidebar flex flex-col items-center justify-between bg-primary-light p-4 h-screen w-64">
       <div class="text-center mb-4">
         <a href="../index.html"><span class="text-xl font-bold text-black">Novice Lync</span></a>
       </div>
@@ -53,28 +53,25 @@
         </li>
         <li id="connect" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=🔗" alt="Connect icon" aria-hidden="true" />
-          <span>Connect</span>
+          <a href="./connect.html"><span>Connect</span></a>
         </li>
         <li id="teams" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=👥" alt="Teams icon" aria-hidden="true" />
-          <span>Teams</span>
+          <a href="./teams.html"><span>Teams</span></a>
         </li>
-        <li id="progress" class="flex items-center space-x-2">
+        <li id="progress" class="flex items-center space-x-2 bg-primary rounded p-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=📈" alt="Progress icon" aria-hidden="true" />
-          <a href="./progress.html"><span>Progress</span></a>
+          <a href="./progress.html"><span class="font-bold">Progress</span></a>
         </li>
         <li id="support" class="flex items-center space-x-2">
           <img src="https://openui.fly.dev/openui/24x24.svg?text=🎧" alt="Support icon" aria-hidden="true" />
-          <span>Support</span>
+          <a href="./support.html"><span>Support</span></a>
         </li>
       </ul>
-      <a href="#"
-        class="mt-auto text-center w-28 inline-block px-6 py-2 text-white bg-red-600 border border-red-700 rounded-md hover:bg-red-500 focus:outline-none focus:ring-2 focus:ring-red-400 transition-colors text-sm">
-        Log out
-      </a>
+      <a href="#" class="btn btn-primary w-full text-center mt-auto">Log Out</a>
     </div>
 
-    <div class="w-3/4 bg-[var(--secondary)] p-8 mx-auto">
+    <div class="main-content p-8 w-3/4 bg-primary-light overflow-y-auto">
       <div class="space-y-8">
         <!-- Product Status Section -->
         <div class="bg-white p-6 rounded-lg shadow-md">
@@ -84,7 +81,7 @@
           <div class="mb-6">
             <h3 class="text-xl font-semibold mb-2">UI: 20% Progressed</h3>
             <div class="relative bg-gray-200 h-4 rounded-full">
-              <div class="absolute top-0 left-0 h-full bg-blue-500 rounded-full" style="width: 20%;"></div>
+              <div class="absolute top-0 left-0 h-full bg-info rounded-full" style="width: 20%;"></div>
               <div class="absolute inset-0 flex items-center justify-center text-gray-500 font-semibold text-sm">20%
               </div>
             </div>
@@ -95,7 +92,7 @@
           <div class="mb-6">
             <h3 class="text-xl font-semibold mb-2">Feature: 10% Implemented</h3>
             <div class="relative bg-gray-200 h-4 rounded-full">
-              <div class="absolute top-0 left-0 h-full bg-green-500 rounded-full" style="width: 10%;"></div>
+              <div class="absolute top-0 left-0 h-full bg-success rounded-full" style="width: 10%;"></div>
               <div class="absolute inset-0 flex items-center justify-center text-gray-500 font-semibold text-sm">10%
               </div>
             </div>
@@ -110,8 +107,7 @@
           </div>
         </div>
 
-        <div class="w-3/4 bg-[var(--secondary)] p-8 mx-auto">
-          <div class="flex space-x-8">
+        <div class="flex space-x-8">
             <!-- Today's Tasks Section -->
             <div class="w-1/2 bg-white p-6 rounded-lg shadow-md todo-container">
               <h2 class="text-2xl font-bold mb-4">Today's Tasks</h2>
