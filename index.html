@@ -1,188 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-    <link rel="stylesheet" href="./Assets/css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Home - Novice Lync</title>
-  </head>
-  <body class="flex flex-col min-h-screen bg-white">
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="container mx-auto flex items-center justify-between px-4">
-        <div class="flex items-center">
-          <img
-            src="./Assets/img/logo/favicon.png"
-            alt="Logo"
-            class="h-8 mr-3"
-          />
-          <span class="navbar-brand">Novice Lync</span>
-        </div>
-        <div class="space-x-4">
-          <a href="./Pages/login.html" class="btn-secondary">Login</a>
-          <a href="./Pages/signup.html" class="btn btn-primary">Sign Up</a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Novice Lync - Connect & Collaborate</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+  <link rel="stylesheet" href="./Assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-gray-50">
+  <nav class="navbar">
+    <div class="container flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="./Assets/img/logo/favicon.png" alt="Novice Lync Logo" class="h-8 w-auto" />
+        <span class="navbar-brand">Novice Lync</span>
       </div>
-    </nav>
+      <div class="flex items-center gap-4">
+        <a href="./Pages/login.html" class="btn btn-secondary">Log in</a>
+        <a href="./Pages/signup.html" class="btn btn-primary">Sign up</a>
+      </div>
+    </div>
+  </nav>
 
+  <main>
     <!-- Hero Section -->
-    <section class="section bg-white">
-      <div class="container mx-auto px-4 text-center">
-        <h1 class="text-4xl font-bold mb-6">Welcome to Novice Lync</h1>
-        <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-          Connect, collaborate, and innovate with fellow students to bring your
-          academic and project ideas to life.
-        </p>
-
-        <a href="#Service" class="btn btn-primary px-6 py-3"
-          >Explore Our Platform</a
-        >
-      </div>
-    </section>
-
-    <!-- Project Overview Section -->
-    <section class="section bg-gray-50">
-      <div class="container mx-auto">
-        <div class="card card-highlight max-w-4xl mx-auto">
-          <h2 class="section-title">Our Project</h2>
-          <div class="space-y-4">
-            <p class="text-lg">
-              Our project aims to address the challenge of facilitating
-              meaningful connections among college students based on their
-              academic interests and potential collaboration opportunities.
-            </p>
-            <p class="text-lg">
-              We propose the development of a student community website that
-              offers a user-friendly platform for students to create profiles,
-              highlighting their names, academic degrees, and areas of interest.
-            </p>
-            <p class="text-lg">
-              Our platform will include interactive networking features such as
-              chat forums, discussion boards, and tools for fostering engagement
-              and facilitating organic connections among students with similar
-              academic interests.
-            </p>
-            <p class="text-lg">
-              By providing these features, our goal is to empower students to
-              collaborate, share knowledge, and explore opportunities for
-              academic growth and networking.
-            </p>
-          </div>
+    <section class="py-20 bg-gradient-to-b from-primary-lightest to-white">
+      <div class="container">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-5xl font-bold text-gray-900 mb-6">
+            Connect, Collaborate, Create
+          </h1>
+          <p class="text-xl text-gray-600 mb-8">
+            Join a community of students and bring your academic projects to life through meaningful collaboration.
+          </p>
+          <a href="#features" class="btn btn-primary text-lg px-8 py-3">
+            Get Started
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="section bg-white" id="Service">
-      <div class="container mx-auto">
-        <h2 class="section-title">Our Platform Services</h2>
+    <!-- Features Section -->
+    <section id="features" class="py-20">
+      <div class="container">
+        <h2 class="text-3xl font-bold text-center mb-12">Why Choose Novice Lync?</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Service 1 -->
-          <div class="card card-highlight">
-            <h3 class="text-xl font-bold mb-4 text-primary">
-              Project Collaboration
-            </h3>
-            <p>
-              We connect college developers to exciting project opportunities
-              where they can collaborate, learn, and build meaningful solutions
-              together.
-            </p>
+          <div class="card">
+            <div class="flex flex-col items-center text-center">
+              <div class="w-16 h-16 bg-primary-lightest rounded-full flex items-center justify-center mb-4">
+                <span class="text-2xl">🤝</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Connect with Peers</h3>
+              <p class="text-gray-600">
+                Find and connect with students who share your academic interests and goals.
+              </p>
+            </div>
           </div>
 
-          <!-- Service 2 -->
-          <div class="card card-highlight">
-            <h3 class="text-xl font-bold mb-4 text-primary">
-              Developer Networking
-            </h3>
-            <p>
-              Our platform helps students network with peers from various
-              academic backgrounds, fostering a community of innovators and
-              creators.
-            </p>
+          <div class="card">
+            <div class="flex flex-col items-center text-center">
+              <div class="w-16 h-16 bg-primary-lightest rounded-full flex items-center justify-center mb-4">
+                <span class="text-2xl">💡</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Collaborate on Projects</h3>
+              <p class="text-gray-600">
+                Work together on meaningful projects that enhance your learning experience.
+              </p>
+            </div>
           </div>
 
-          <!-- Service 3 -->
-          <div class="card card-highlight">
-            <h3 class="text-xl font-bold mb-4 text-primary">
-              Project Management Tools
-            </h3>
-            <p>
-              We provide intuitive project management tools that streamline
-              collaboration, tracking progress, and ensuring smooth
-              communication between team members.
-            </p>
+          <div class="card">
+            <div class="flex flex-col items-center text-center">
+              <div class="w-16 h-16 bg-primary-lightest rounded-full flex items-center justify-center mb-4">
+                <span class="text-2xl">📈</span>
+              </div>
+              <h3 class="text-xl font-semibold mb-3">Track Progress</h3>
+              <p class="text-gray-600">
+                Monitor your team's progress and celebrate achievements together.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer mt-auto">
-      <div class="container mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="text-center md:text-left mb-4 md:mb-0">
-            <a href="#" class="footer-link">Privacy Policy</a>
-            <span class="mx-2 text-gray-300">|</span>
-            <a href="#" class="footer-link">Terms of Service</a>
-            <span class="mx-2 text-gray-300">|</span>
-            <a href="#" class="footer-link">About Us</a>
-            <span class="mx-2 text-gray-300">|</span>
-            <a href="#" class="footer-link">FAQ</a>
-          </div>
-          <div class="text-center mb-4 md:mb-0">
-            <a href="#" class="footer-link">Contact Us</a>
-          </div>
-          <div class="flex space-x-6">
-            <a href="https://twitter.com" class="social-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-                ></path>
-              </svg>
-              <span>X (Twitter)</span>
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary">
+      <div class="container">
+        <div class="max-w-3xl mx-auto text-center text-white">
+          <h2 class="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+          <p class="text-xl mb-8 opacity-90">
+            Join thousands of students already collaborating on Novice Lync.
+          </p>
+          <div class="flex justify-center gap-4">
+            <a href="./Pages/signup.html" class="btn bg-white text-primary hover:bg-gray-100">
+              Create Account
             </a>
-            <a href="https://facebook.com" class="social-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"
-                />
-              </svg>
-              <span>Facebook</span>
-            </a>
-            <a href="https://linkedin.com" class="social-icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                />
-              </svg>
-              <span>LinkedIn</span>
+            <a href="#learn-more" class="btn border border-white hover:bg-primary-light">
+              Learn More
             </a>
           </div>
         </div>
       </div>
-    </footer>
-  </body>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-lg font-semibold mb-4">About</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-primary-light">About Us</a></li>
+            <li><a href="#" class="hover:text-primary-light">Careers</a></li>
+            <li><a href="#" class="hover:text-primary-light">Press</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Resources</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-primary-light">Documentation</a></li>
+            <li><a href="#" class="hover:text-primary-light">Help Center</a></li>
+            <li><a href="#" class="hover:text-primary-light">Community</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Legal</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-primary-light">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-primary-light">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-primary-light">Cookie Policy</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Connect</h3>
+          <div class="flex space-x-4">
+            <a href="https://twitter.com" class="hover:text-primary-light">
+              Twitter
+            </a>
+            <a href="https://linkedin.com" class="hover:text-primary-light">
+              LinkedIn
+            </a>
+            <a href="https://github.com" class="hover:text-primary-light">
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="mt-12 pt-8 border-t border-gray-800 text-center">
+        <p class="text-gray-400">
+          © 2024 Novice Lync. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
