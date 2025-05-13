@@ -172,6 +172,22 @@ body {
   box-shadow: var(--shadow-sm);
 }
 
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.navbar-brand img {
+  height: 2rem;
+  width: auto;
+}
+
+/* Sidebar */
 .sidebar {
   background-color: var(--surface);
   border-right: 1px solid var(--border);
@@ -181,6 +197,19 @@ body {
   top: 0;
   width: 280px;
   z-index: 40;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: var(--space-4);
+  margin-bottom: var(--space-6);
+  text-align: center;
+}
+
+.sidebar-nav {
+  flex: 1;
+  overflow-y: auto;
 }
 
 .sidebar-link {
@@ -192,6 +221,8 @@ body {
   transition: var(--transition);
   font-weight: 500;
   gap: var(--space-3);
+  text-decoration: none;
+  margin-bottom: var(--space-2);
 }
 
 .sidebar-link:hover {
@@ -203,12 +234,34 @@ body {
   color: var(--primary-foreground);
 }
 
+.sidebar-link img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.sidebar-footer {
+  padding: var(--space-4);
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+}
+
 /* Main Content */
 .main-content {
   flex: 1;
   padding: var(--space-6);
   background-color: var(--background-secondary);
   min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* Mobile Menu */
+.mobile-menu-button {
+  display: none;
+  padding: var(--space-2);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  cursor: pointer;
 }
 
 /* Responsive Design */
@@ -224,6 +277,10 @@ body {
     transform: translateX(0);
   }
 
+  .mobile-menu-button {
+    display: block;
+  }
+
   .main-content {
     width: 100% !important;
     padding: var(--space-4);
@@ -231,6 +288,10 @@ body {
 
   .container {
     padding: 0 var(--space-4);
+  }
+
+  .card {
+    padding: var(--space-4);
   }
 }
 
@@ -248,3 +309,11 @@ body {
 .text-sm { font-size: 0.875rem; }
 .text-lg { font-size: 1.125rem; }
 .rounded-full { border-radius: var(--radius-full); }
+.hidden { display: none; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.z-50 { z-index: 50; }
+.overflow-hidden { overflow: hidden; }
+.overflow-y-auto { overflow-y: auto; }
+.shadow-md { box-shadow: var(--shadow-md); }
+.transition { transition: var(--transition); }
